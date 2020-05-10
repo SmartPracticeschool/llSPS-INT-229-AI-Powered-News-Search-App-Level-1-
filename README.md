@@ -32,8 +32,7 @@ for the model\'s deployment.
 -   Cloud/Server-Side Functions - IBM Watson Discovery News, Online News
 -   External Functions - Slack, RSS
 
-![the image](media/image1.png){width="6.270833333333333in"
-height="2.986111111111111in"}
+![the image](media/image1.png)
 
 ## Project Deliverables
 -   Creating a server-side application using Node-RED
