@@ -1,0 +1,414 @@
+[
+    {
+        "id": "afe6bac3.54c008",
+        "type": "tab",
+        "label": "main",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ab45344c.5d1968",
+        "type": "ui_form",
+        "z": "afe6bac3.54c008",
+        "name": "news ->",
+        "label": "",
+        "group": "5551d7cf.02f518",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "options":
+        [
+            {
+                "label": "Look up a news topic ",
+                "value": "Input",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue":
+        {
+            "Input": ""
+        },
+        "payload": "",
+        "submit": "Search",
+        "cancel": "Cancel",
+        "topic": "",
+        "x": 120,
+        "y": 40,
+        "wires":
+        [
+            [
+                "190a1634.a676aa",
+                "b06959eb.dc27c8"
+            ]
+        ]
+    },
+    {
+        "id": "190a1634.a676aa",
+        "type": "function",
+        "z": "afe6bac3.54c008",
+        "name": "query ->",
+        "func": "msg={\ndiscoveryparams:\n  {\n\"environment_id\":\"system\",\n\"query\":msg.payload.Input\n  }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 180,
+        "y": 100,
+        "wires":
+        [
+            [
+                "57e3d18d.d59dd"
+            ]
+        ]
+    },
+    {
+        "id": "887f4ff5.2d7e",
+        "type": "function",
+        "z": "afe6bac3.54c008",
+        "name": "article",
+        "func": "msg.payload=msg.search_results.results[0].text\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 100,
+        "wires":
+        [
+            [
+                "68b81d6e.e12174"
+            ]
+        ]
+    },
+    {
+        "id": "57e3d18d.d59dd",
+        "type": "watson-discovery-v1",
+        "z": "afe6bac3.54c008",
+        "name": "discovery news",
+        "environmentname": "",
+        "environmentId": "system",
+        "collectionId": "news-en",
+        "configurationname": "",
+        "configurationId": "",
+        "language_code": "en",
+        "collection_name": "",
+        "count": "1",
+        "passages": true,
+        "nlp_query": true,
+        "query": "",
+        "filter": "",
+        "aggregation": "term(enriched_text.sentiment.document.label,count:10)",
+        "return": "",
+        "description": "",
+        "size": "LT",
+        "discovery-method": "query",
+        "service-endpoint": "https://api.eu-gb.discovery.watson.cloud.ibm.com/instances/a0048099-cf37-402e-b871-32143f8cc94e",
+        "x": 260,
+        "y": 160,
+        "wires":
+        [
+            [
+                "887f4ff5.2d7e",
+                "34fe010a.18dd5e",
+                "f7ccfa88.086828",
+                "d8e0a9cf.9e1488",
+                "5a15eeb.b8a881",
+                "1cc689aa.34edf6"
+            ]
+        ]
+    },
+    {
+        "id": "68b81d6e.e12174",
+        "type": "ui_text",
+        "z": "afe6bac3.54c008",
+        "group": "5551d7cf.02f518",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "name": "-> article",
+        "label": "",
+        "format": "<br><br>{{msg.payload}}",
+        "layout": "row-left",
+        "x": 700,
+        "y": 100,
+        "wires": [],
+        "info": "# The Article"
+    },
+    {
+        "id": "d8e0a9cf.9e1488",
+        "type": "function",
+        "z": "afe6bac3.54c008",
+        "name": "url",
+        "func": "msg.payload=msg.search_results.results[0].url\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 160,
+        "wires":
+        [
+            [
+                "8efc2266.52018"
+            ]
+        ]
+    },
+    {
+        "id": "34fe010a.18dd5e",
+        "type": "function",
+        "z": "afe6bac3.54c008",
+        "name": "author",
+        "func": "msg.payload=msg.search_results.results[0].author\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 220,
+        "wires":
+        [
+            [
+                "541d824d.d5bb1c"
+            ]
+        ]
+    },
+    {
+        "id": "f7ccfa88.086828",
+        "type": "function",
+        "z": "afe6bac3.54c008",
+        "name": "score",
+        "func": "msg.payload=msg.search_results.results[0].enriched_text.sentiment.document.score\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 280,
+        "wires":
+        [
+            [
+                "ab8f0932.c5b2e8"
+            ]
+        ]
+    },
+    {
+        "id": "5a15eeb.b8a881",
+        "type": "function",
+        "z": "afe6bac3.54c008",
+        "name": "label",
+        "func": "msg.payload=msg.search_results.results[0].enriched_text.sentiment.document.label\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 340,
+        "wires":
+        [
+            [
+                "220adda1.abf702"
+            ]
+        ]
+    },
+    {
+        "id": "220adda1.abf702",
+        "type": "ui_text",
+        "z": "afe6bac3.54c008",
+        "group": "5551d7cf.02f518",
+        "order": 7,
+        "width": "14",
+        "height": "1",
+        "name": "-> label",
+        "label": "",
+        "format": "This article has a {{msg.payload}} sentiment.",
+        "layout": "row-center",
+        "x": 700,
+        "y": 340,
+        "wires": [],
+        "info": "# The Sentiment Label\n### This can either be positive, neutral or negative"
+    },
+    {
+        "id": "541d824d.d5bb1c",
+        "type": "ui_text",
+        "z": "afe6bac3.54c008",
+        "group": "5551d7cf.02f518",
+        "order": 5,
+        "width": "14",
+        "height": "1",
+        "name": "-> author",
+        "label": "",
+        "format": "Author - {{msg.payload}}",
+        "layout": "row-left",
+        "x": 700,
+        "y": 220,
+        "wires": [],
+        "info": "# The Author"
+    },
+    {
+        "id": "ab8f0932.c5b2e8",
+        "type": "ui_gauge",
+        "z": "afe6bac3.54c008",
+        "name": "-> score",
+        "group": "5551d7cf.02f518",
+        "order": 6,
+        "width": "14",
+        "height": "9",
+        "gtype": "donut",
+        "title": "<br><br><h1 style=\"font-weight:bold\">Sentiment Score</h1>",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "10",
+        "colors":
+        [
+            "#9d009d",
+            "#ff91ff",
+            "#d700d7"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 700,
+        "y": 280,
+        "wires": [],
+        "info": "# The Sentiment Score \n### Ranging from -2 to +2"
+    },
+    {
+        "id": "518c773a.00c868",
+        "type": "function",
+        "z": "afe6bac3.54c008",
+        "name": "->",
+        "func": "msg.payload=\n[\n    {\n        \"series\":[\"News\"],\n        \"data\":[msg.payload[0],msg.payload[1],msg.payload[2]],\n        \"labels\":[\"Positive\",\"Negative\",\"Neutral\"]\n    }\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 650,
+        "y": 400,
+        "wires":
+        [
+            [
+                "99e240c8.28a57"
+            ]
+        ]
+    },
+    {
+        "id": "99e240c8.28a57",
+        "type": "ui_chart",
+        "z": "afe6bac3.54c008",
+        "name": "analysis",
+        "group": "5551d7cf.02f518",
+        "order": 8,
+        "width": "14",
+        "height": "16",
+        "label": "<h1 style=\"font-weight:bold\">Analysis of Sentiments</h1>",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors":
+        [
+            "#9d009d",
+            "#ff82ff",
+            "#d900d9",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 460,
+        "wires":
+        [
+            []
+        ]
+    },
+    {
+        "id": "1cc689aa.34edf6",
+        "type": "function",
+        "z": "afe6bac3.54c008",
+        "name": "sentiment",
+        "func": "var val=[msg.search_results.aggregations[0].results[0].matching_results];\nval.push(msg.search_results.aggregations[0].results[1].matching_results);\nval.push(msg.search_results.aggregations[0].results[2].matching_results);\nmsg.payload=val;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 400,
+        "wires":
+        [
+            [
+                "518c773a.00c868"
+            ]
+        ]
+    },
+    {
+        "id": "8efc2266.52018",
+        "type": "ui_text",
+        "z": "afe6bac3.54c008",
+        "group": "5551d7cf.02f518",
+        "order": 4,
+        "width": "14",
+        "height": "1",
+        "name": "-> url",
+        "label": "",
+        "format": "URL - <a href={{msg.payload}}>click here</a>",
+        "layout": "row-left",
+        "x": 690,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a5ccfae8.9c7258",
+        "type": "ui_text",
+        "z": "afe6bac3.54c008",
+        "group": "5551d7cf.02f518",
+        "order": 2,
+        "width": "14",
+        "height": "1",
+        "name": "-> title",
+        "label": "",
+        "format": "<h1 style=\"text-transform: uppercase\">{{msg.payload}}</h1>",
+        "layout": "col-center",
+        "x": 690,
+        "y": 40,
+        "wires": [],
+        "info": "# The Article"
+    },
+    {
+        "id": "b06959eb.dc27c8",
+        "type": "function",
+        "z": "afe6bac3.54c008",
+        "name": "extract input as title",
+        "func": "msg.payload=msg.payload.Input\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 40,
+        "wires":
+        [
+            [
+                "a5ccfae8.9c7258"
+            ]
+        ]
+    },
+    {
+        "id": "5551d7cf.02f518",
+        "type": "ui_group",
+        "z": "",
+        "name": "Get the news!",
+        "tab": "d8108a45.772378",
+        "order": 1,
+        "disp": true,
+        "width": "14",
+        "collapse": false
+    },
+    {
+        "id": "d8108a45.772378",
+        "type": "ui_tab",
+        "z": "",
+        "name": "NEWS",
+        "icon": "news",
+        "disabled": false,
+        "hidden": false
+    }
+]
