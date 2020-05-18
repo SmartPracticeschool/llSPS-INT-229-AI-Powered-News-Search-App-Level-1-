@@ -19,6 +19,9 @@ There are three ways to host and use this project, as given below:
 6. You can join nodes and make them recognise each other with function nodes, since you can add JSON to convert the values of the nodes.
 7. Install the Discovery Node too, since it's the node that corresponds to the Watson Discovery News Service.
 8. Commplete the Node-RED flow and deploy the nodes.
+
+![the flow](images/flow.PNG)
+
 9. Access the UI by taking the app's URL and typing _/ui_ beside it.
 eg: `https://getthenews.eu-gb.mybluemix.com/red` can be used to access the nodes used in the application, while `https://getthenews.eu-gb.mybluemix.com/ui` can be used to access the application's User Interface.
 10. You're done! Congratulations on deploying your web application to the cloud!
@@ -62,26 +65,11 @@ Then, locate the service credentials listed on the home page of your Discovery s
 npm start`
 13. Now, go to your Slack workspace, look for your bot and have a conversation with it!
 
-`@user> hi`
-
-`@get_the_news> Hello.`
-
-`@user> news please`
-
-`@get_the_news> Hi there!
-What news are you interested in?`
-
-`@user>covid19`
-
-`@get_the_news> You want me to search news about _**covid19**_?`
-
-`@user>yes please!`
-
-`@get_the_news> _returns three relevant news articles with cover images and source urls successfully_`
+![slack bot](images/slackbot.PNG)
 
 
 ## Important Links
-1. [Report](https://github.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/blob/master/llSPS_INT_229_AI%20Powered%20News%20Search%20App%20(Level-1).pdf)
+1. [Report](Report.pdf)
 2. [Flow](https://raw.githubusercontent.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/master/flows.json)
 3. [Website](https://getthenews.eu-gb.mybluemix.net/ui)
 4. [Video Presentation]() - Coming Soon
