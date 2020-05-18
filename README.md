@@ -65,26 +65,11 @@ Then, locate the service credentials listed on the home page of your Discovery s
 npm start`
 13. Now, go to your Slack workspace, look for your bot and have a conversation with it!
 
-`@user> hi`
-
-`@get_the_news> Hello.`
-
-`@user> news please`
-
-`@get_the_news> Hi there!
-What news are you interested in?`
-
-`@user>covid19`
-
-`@get_the_news> You want me to search news about _**covid19**_?`
-
-`@user>yes please!`
-
-`@get_the_news> _returns three relevant news articles with cover images and source urls successfully_`
+![slack bot](images/slackbot.PNG)
 
 
 ## Important Links
-1. [Report](https://github.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/blob/master/llSPS_INT_229_AI%20Powered%20News%20Search%20App%20(Level-1).pdf)
+1. [Report](Report.pdf)
 2. [Flow](https://raw.githubusercontent.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/master/flows.json)
 3. [Website](https://getthenews.eu-gb.mybluemix.net/ui)
 4. [Video Presentation]() - Coming Soon
