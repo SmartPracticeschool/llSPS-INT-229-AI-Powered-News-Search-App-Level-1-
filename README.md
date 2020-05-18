@@ -26,10 +26,14 @@ eg: `https://getthenews.eu-gb.mybluemix.com/red` can be used to access the nodes
 ### B. Locally (on your desktop)
 1. A simple `git clone https://github.com/ibm/watson-discovery-news` on the git bash terminal would clone the project to your computer. 
 2. Following that command with the one below, you can start the application in your browser and view the application in your local browser.
-`cd watson-discovery-news
-npm install
-npm update
-npm start`
+`cd watson-discovery-news`
+
+`npm install`
+
+`npm update`
+
+`npm start`
+
 3. If you have already deployed it using the cloudant service in IBM as given above, there is no need for this, unless you want to integrate
 it with Slack, for which you can follow the steps below.
 
@@ -56,22 +60,22 @@ Then, locate the service credentials listed on the home page of your Discovery s
 npm start`
 13. Now, go to your Slack workspace, look for your bot and have a conversation with it!
 
-`@user> hi
+`@user> hi`
 
-@get_the_news> Hello.
+`@get_the_news> Hello.`
 
-@user> news please
+`@user> news please`
 
-@get_the_news> Hi there!
-What news are you interested in?
+`@get_the_news> Hi there!
+What news are you interested in?`
 
-@user>covid19
+`@user>covid19`
 
-@get_the_news> You want me to search news about _**covid19**_?`
+`@get_the_news> You want me to search news about _**covid19**_?`
 
-@user>yes please!
+`@user>yes please!`
 
-@get_the_news> _returns three relevant news articles with cover images and source urls successfully_`
+`@get_the_news> _returns three relevant news articles with cover images and source urls successfully_`
 
 
 ## Important Links
