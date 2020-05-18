@@ -12,3 +12,4 @@
 2. [Flow](https://raw.githubusercontent.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/master/flows.json)
 3. [Website](https://getthenews.eu-gb.mybluemix.net/ui)
 4. [Video Presentation]() - Coming Soon
+5. [Internship and Platform Review Video]() - Coming Soon
