@@ -23,6 +23,8 @@ There are three ways to host and use this project, as given below:
 eg: `https://getthenews.eu-gb.mybluemix.com/red` can be used to access the nodes used in the application, while `https://getthenews.eu-gb.mybluemix.com/ui` can be used to access the application's User Interface.
 10. You're done! Congratulations on deploying your web application to the cloud!
 
+![the app](images/ezgif.com-gif-maker.gif)
+
 ### B. Locally (on your desktop)
 1. A simple `git clone https://github.com/ibm/watson-discovery-news` on the git bash terminal would clone the project to your computer. 
 2. Following that command with the one below, you can start the application in your browser and view the application in your local browser.
