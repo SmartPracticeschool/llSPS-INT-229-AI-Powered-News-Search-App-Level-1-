@@ -19,6 +19,9 @@ There are three ways to host and use this project, as given below:
 6. You can join nodes and make them recognise each other with function nodes, since you can add JSON to convert the values of the nodes.
 7. Install the Discovery Node too, since it's the node that corresponds to the Watson Discovery News Service.
 8. Commplete the Node-RED flow and deploy the nodes.
+
+![the flow](images/flow.PNG)
+
 9. Access the UI by taking the app's URL and typing _/ui_ beside it.
 eg: `https://getthenews.eu-gb.mybluemix.com/red` can be used to access the nodes used in the application, while `https://getthenews.eu-gb.mybluemix.com/ui` can be used to access the application's User Interface.
 10. You're done! Congratulations on deploying your web application to the cloud!
