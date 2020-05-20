@@ -33,11 +33,11 @@ eg: `https://getthenews.eu-gb.mybluemix.com/red` can be used to access the nodes
 2. Following that command with the one below, you can start the application in your browser and view the application in your local browser.
 `cd watson-discovery-news`
 
-`npm install`
-
-`npm update`
-
-`npm start`
+```
+npm install
+npm update
+npm start
+```
 
 3. If you have already deployed it using the cloudant service in IBM as given above, there is no need for this, unless you want to integrate
 it with Slack, for which you can follow the steps below.
@@ -61,11 +61,23 @@ Then, locate the service credentials listed on the home page of your Discovery s
 10. Enter a unique username for the bot and click on **Add Bot Integration**.
 11. Once the bot is created, the API token is generated! Copy this API token and paste it in the .env file, where `SLACK_BOT_TOKEN=` is given.
 12. Save the `.env` file, and continue on the terminal by typing these commands:
-`npm install
-npm start`
+```
+npm install
+npm start
+```
 13. Now, go to your Slack workspace, look for your bot and have a conversation with it!
 
 ![slack bot](images/slackbot.PNG)
+```
+@user> hi
+@get_the_news> Hello.
+@user> news please
+@get_the_news> Hi there! What news are you interested in?
+@user>covid19
+@get_the_news> You want me to search news about covid19?
+@user>yes please!
+@get_the_news> *returns three relevant news articles with cover images and source urls successfully*
+```
 
 
 ## Important Links
