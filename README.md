@@ -68,6 +68,16 @@ npm start
 13. Now, go to your Slack workspace, look for your bot and have a conversation with it!
 
 ![slack bot](images/slackbot.PNG)
+```
+@user> hi
+@get_the_news> Hello.
+@user> news please
+@get_the_news> Hi there! What news are you interested in?
+@user>covid19
+@get_the_news> You want me to search news about covid19?
+@user>yes please!
+@get_the_news> *returns three relevant news articles with cover images and source urls successfully*
+```
 
 
 ## Important Links
