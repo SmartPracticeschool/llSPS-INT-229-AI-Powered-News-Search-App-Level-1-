@@ -19,20 +19,25 @@ There are three ways to host and use this project, as given below:
 6. You can join nodes and make them recognise each other with function nodes, since you can add JSON to convert the values of the nodes.
 7. Install the Discovery Node too, since it's the node that corresponds to the Watson Discovery News Service.
 8. Commplete the Node-RED flow and deploy the nodes.
+
+![the flow](images/flow.PNG)
+
 9. Access the UI by taking the app's URL and typing _/ui_ beside it.
 eg: `https://getthenews.eu-gb.mybluemix.com/red` can be used to access the nodes used in the application, while `https://getthenews.eu-gb.mybluemix.com/ui` can be used to access the application's User Interface.
 10. You're done! Congratulations on deploying your web application to the cloud!
+
+![the app](images/ezgif.com-gif-maker.gif)
 
 ### B. Locally (on your desktop)
 1. A simple `git clone https://github.com/ibm/watson-discovery-news` on the git bash terminal would clone the project to your computer. 
 2. Following that command with the one below, you can start the application in your browser and view the application in your local browser.
 `cd watson-discovery-news`
 
-`npm install`
-
-`npm update`
-
-`npm start`
+```
+npm install
+npm update
+npm start
+```
 
 3. If you have already deployed it using the cloudant service in IBM as given above, there is no need for this, unless you want to integrate
 it with Slack, for which you can follow the steps below.
@@ -56,30 +61,27 @@ Then, locate the service credentials listed on the home page of your Discovery s
 10. Enter a unique username for the bot and click on **Add Bot Integration**.
 11. Once the bot is created, the API token is generated! Copy this API token and paste it in the .env file, where `SLACK_BOT_TOKEN=` is given.
 12. Save the `.env` file, and continue on the terminal by typing these commands:
-`npm install
-npm start`
+```
+npm install
+npm start
+```
 13. Now, go to your Slack workspace, look for your bot and have a conversation with it!
 
-`@user> hi`
-
-`@get_the_news> Hello.`
-
-`@user> news please`
-
-`@get_the_news> Hi there!
-What news are you interested in?`
-
-`@user>covid19`
-
-`@get_the_news> You want me to search news about _**covid19**_?`
-
-`@user>yes please!`
-
-`@get_the_news> _returns three relevant news articles with cover images and source urls successfully_`
+![slack bot](images/slackbot.PNG)
+```
+@user> hi
+@get_the_news> Hello.
+@user> news please
+@get_the_news> Hi there! What news are you interested in?
+@user>covid19
+@get_the_news> You want me to search news about covid19?
+@user>yes please!
+@get_the_news> *returns three relevant news articles with cover images and source urls successfully*
+```
 
 
 ## Important Links
-1. [Report](https://github.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/blob/master/llSPS_INT_229_AI%20Powered%20News%20Search%20App%20(Level-1).pdf)
+1. [Report](Report.pdf)
 2. [Flow](https://raw.githubusercontent.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/master/flows.json)
 3. [Website](https://getthenews.eu-gb.mybluemix.net/ui)
 4. [Video Presentation]() - Coming Soon
