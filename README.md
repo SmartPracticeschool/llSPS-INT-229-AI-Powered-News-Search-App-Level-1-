@@ -6,6 +6,14 @@ along with using IBM Cloud for the deployment and IBM Watson's Discovery Service
 and gaining the sentiment of that news article. Also, Slack has been integrated with this service for quick access to the news.
 
 
+## Important Links
+- [x] [Report](Report.pdf)
+- [x] [Flow](https://raw.githubusercontent.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/master/flows.json)
+- [x] [Website](https://getthenews.eu-gb.mybluemix.net/ui)
+- [x] [Video Presentation](https://clipchamp.com/watch/q11XbDnF3Fr)
+- [ ] [Internship and Platform Review Video]() - Coming Soon
+
+
 ## Hosting this Project
 There are three ways to host and use this project, as given below:
 
@@ -78,11 +86,3 @@ npm start
 @user>yes please!
 @get_the_news> *returns three relevant news articles with cover images and source urls successfully*
 ```
-
-
-## Important Links
-1. [Report](Report.pdf)
-2. [Flow](https://raw.githubusercontent.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/master/flows.json)
-3. [Website](https://getthenews.eu-gb.mybluemix.net/ui)
-4. [Video Presentation]() - Coming Soon
-5. [Internship and Platform Review Video]() - Coming Soon
