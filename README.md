@@ -1,4 +1,5 @@
 # AI POWERED NEWS SEARCH APP (Level - 1)
+[You can check out the documentation here too!](http://sirat.me/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/)
 
 ## About this Project
 The aim of this project is to build a news mining application using Node-RED (Node.js) to create a web application,
