@@ -75,7 +75,7 @@ npm start
 ```
 13. Now, go to your Slack workspace, look for your bot and have a conversation with it!
 
-![slack bot](images/slackbot.PNG)
+![slack bot](https://raw.githubusercontent.com/sBx99/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/updates/images/slackbot.PNG)
 ```
 @user> hi
 @get_the_news> Hello.
