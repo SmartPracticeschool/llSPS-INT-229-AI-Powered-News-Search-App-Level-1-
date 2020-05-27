@@ -1,5 +1,5 @@
 # AI POWERED NEWS SEARCH APP (Level - 1)
-[You can check out the documentation here too!](http://sirat.me/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/)
+[If you're in in the git repository, you can check out the documentation here!](http://sirat.me/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/)
 
 ## About this Project
 The aim of this project is to build a news mining application using Node-RED (Node.js) to create a web application,
@@ -12,7 +12,7 @@ and gaining the sentiment of that news article. Also, Slack has been integrated 
 - [x] [Flow](https://raw.githubusercontent.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/master/flows.json)
 - [x] [Website](https://getthenews.eu-gb.mybluemix.net/ui)
 - [x] [Video Presentation](https://youtu.be/vicnBOgkhXs)
-- [ ] [Internship and Platform Review Video]() - Coming Soon
+- [ ] [Internship and Platform Review Video](https://drive.google.com/file/d/1EC5pAO756_a3dhFt9O5p4IvHGWv7wloX/view?usp=sharing)
 
 
 ## Hosting this Project
@@ -42,7 +42,7 @@ eg: `https://getthenews.eu-gb.mybluemix.com/red` can be used to access the nodes
 2. Following that command with the one below, you can start the application in your browser and view the application in your local browser.
 `cd watson-discovery-news`
 
-```
+```shell
 npm install
 npm update
 npm start
@@ -70,14 +70,15 @@ Then, locate the service credentials listed on the home page of your Discovery s
 10. Enter a unique username for the bot and click on **Add Bot Integration**.
 11. Once the bot is created, the API token is generated! Copy this API token and paste it in the .env file, where `SLACK_BOT_TOKEN=` is given.
 12. Save the `.env` file, and continue on the terminal by typing these commands:
-```
+```shell
 npm install
 npm start
 ```
 13. Now, go to your Slack workspace, look for your bot and have a conversation with it!
 
 ![slack bot](https://raw.githubusercontent.com/sBx99/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/updates/images/slackbot.PNG)
-```
+
+```slack
 @user> hi
 @get_the_news> Hello.
 @user> news please
