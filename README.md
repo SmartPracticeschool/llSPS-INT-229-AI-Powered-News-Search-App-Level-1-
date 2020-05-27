@@ -8,11 +8,11 @@ and gaining the sentiment of that news article. Also, Slack has been integrated 
 
 
 ## Important Links
-- [x] [Report](Report.pdf)
-- [x] [Flow](https://raw.githubusercontent.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/master/flows.json)
-- [x] [Website](https://getthenews.eu-gb.mybluemix.net/ui)
-- [x] [Video Presentation](https://youtu.be/vicnBOgkhXs)
-- [ ] [Internship and Platform Review Video](https://drive.google.com/file/d/1EC5pAO756_a3dhFt9O5p4IvHGWv7wloX/view?usp=sharing)
+- [x] [Report](Report.pdf) :chart_with_upwards_trend:
+- [x] [Flow](https://raw.githubusercontent.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/master/flows.json) :arrows_counterclockwise:
+- [x] [Website](https://getthenews.eu-gb.mybluemix.net/ui) :computer:
+- [x] [Video Presentation](https://youtu.be/vicnBOgkhXs) :video_camera: -- _[Transcript](https://github.com/sBx99/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/blob/gh-pages/presentation.md)_ :octocat:
+- [x] [Internship and Platform Review Video](https://drive.google.com/file/d/1EC5pAO756_a3dhFt9O5p4IvHGWv7wloX/view?usp=sharing) :video_camera: -- _[Transcript](https://github.com/sBx99/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/blob/gh-pages/review.md)_ :octocat:
 
 
 ## Hosting this Project
