@@ -12,7 +12,7 @@ and gaining the sentiment of that news article. Also, Slack has been integrated 
 - [x] [Flow](https://raw.githubusercontent.com/SmartPracticeschool/llSPS-INT-229-AI-Powered-News-Search-App-Level-1-/master/flows.json)
 - [x] [Website](https://getthenews.eu-gb.mybluemix.net/ui)
 - [x] [Video Presentation](https://youtu.be/vicnBOgkhXs)
-- [ ] [Internship and Platform Review Video](https://drive.google.com/file/d/1EC5pAO756_a3dhFt9O5p4IvHGWv7wloX/view?usp=sharing)
+- [x] [Internship and Platform Review Video](https://drive.google.com/file/d/1EC5pAO756_a3dhFt9O5p4IvHGWv7wloX/view?usp=sharing)
 
 
 ## Hosting this Project
